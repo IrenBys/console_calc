@@ -5,5 +5,6 @@
 
 void printResult(int a, int b, int c, char operation);
 void printTask(const Task& task);
+void printHelp();
 
 #endif
