@@ -7,8 +7,7 @@ void printResult(int a, int b, double c, char operation)
     // Если операция не факториал, то печатаем в формате "число1 операция число2 = результат"
     if (operation != '!')
     {
-        std::cout << a << ' ' << operation << ' ' << b << " = " << c << '\n';
-    
+        std::cout << a << ' ' << operation << ' ' << b << " = " << c << '\n';    
     } 
     else 
     {
@@ -31,7 +30,7 @@ void printTask(const Task& task)
             // Статус 2 означает, что пользователь вызвал --help, поэтому не печатаем результат
             break;
         case -1:
-            std::cout << "Invalid value\n";
+            std::cout << "Invalid input value\n";
             break;
         default:
             std::cout << "Unknown error.\n";            

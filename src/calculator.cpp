@@ -10,22 +10,22 @@ void calculate(Task& task)
     switch (task.operation)
     {
     case '+':
-        task.result = mathlib::addition(task.value1, task.value2);
+        task.status = mathlib::addition(task.value1, task.value2, &task.result);
         break;
     case '-':
-        task.result = mathlib::substraction(task.value1, task.value2);
+        task.status = mathlib::substraction(task.value1, task.value2, &task.result);
         break;
     case '*':
-        task.result = mathlib::multiplication(task.value1, task.value2);
+        task.status = mathlib::multiplication(task.value1, task.value2, &task.result);
         break;
     case '/':
         task.status = mathlib::division(task.value1, task.value2, &task.result);
         break;
     case '^':
-        task.result = mathlib::power(task.value1, task.value2);
+        task.status = mathlib::power(task.value1, task.value2, &task.result);
         break;
     case '!':
-        task.status = mathlib::factorial(task.value1, &task.resul);
+        task.status = mathlib::factorial(task.value1, &task.result);
         break;
     default:
         task.status = 1;
