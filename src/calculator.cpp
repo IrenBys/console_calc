@@ -9,7 +9,7 @@ void calculate(Task& task)
     switch (task.operation)
     {
     case '+':
-            task.result = mathlib::addition(task.value1, task.value2);
+        task.result = mathlib::addition(task.value1, task.value2);
         break;
     case '-':
         task.result = mathlib::substraction(task.value1, task.value2);
@@ -24,7 +24,7 @@ void calculate(Task& task)
         task.result = mathlib::power(task.value1, task.value2);
         break;
     case '!':
-        task.status = mathlib::factorial(task.value1);
+        task.result = mathlib::factorial(task.value1);
         break;
     default:
         task.status = 1;

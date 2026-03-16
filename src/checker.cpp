@@ -10,7 +10,7 @@ void check(Task& task)
 
     // Проверка неизвестной операции
     if (!(task.operation == '+' || task.operation == '-' || task.operation == '*' ||
-        task.operation == '/' || task.operation == '^'))
+          task.operation == '/' || task.operation == '^' || task.operation == '!'))
     {
         task.status = 1;
     }
