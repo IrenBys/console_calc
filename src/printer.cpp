@@ -2,7 +2,7 @@
 #include <iostream>
 
 // Функция для печати результата вычисления в формате "число1 операция число2 = результат"
-void printResult(int a, int b, int c, char operation)
+void printResult(int a, int b, double c, char operation)
 {
     // Если операция не факториал, то печатаем в формате "число1 операция число2 = результат"
     if (operation != '!')
