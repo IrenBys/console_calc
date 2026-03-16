@@ -1,5 +1,6 @@
 #include "calculator.h"
 #include "mathlib.h"
+#include <iostream>
 
 // Функция для выполнения вычислений в зависимости от операции, указанной в структуре Task.
 // Результат сохраняется в поле result, а статус ошибки (если есть) сохраняется в поле status.
@@ -25,6 +26,11 @@ void calculate(Task& task)
         break;
     case '!':
         task.result = mathlib::factorial(task.value1);
+        // Проверяем, не возникла ли ошибка при вычислении факториала (например, для отрицательныx чисел)
+        if (task.result == -1) 
+        {
+            task.status = 3; 
+        }
         break;
     default:
         task.status = 1;

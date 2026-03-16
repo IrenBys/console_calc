@@ -20,20 +20,44 @@ void printResult(int a, int b, int c, char operation)
 // Функция для печати результата или сообщения об ошибке в зависимости от статуса задачи
 void printTask(const Task& task)
 {
-    if (task.status == 0)
+    switch (task.status)
     {
-        printResult(task.value1, task.value2, task.result, task.operation);
+        case 0:
+            printResult(task.value1, task.value2, task.result, task.operation);
+            break;
+        case 1:
+            std::cout << "Error! Unknown operation!\n";
+            break;
+        case 2:
+            // Статус 2 означает, что пользователь вызвал --help, поэтому не печатаем результат
+            break;
+        case 3:
+            std::cout << "Error! Invalid input for factorial!\n";
+            break;
+        case -1:
+            std::cout << "Error! Division by zero!\n";
+            break;
+        default:
+            std::cout << "Unknown error.\n";
+            
     }
-    else if (task.status == -1)
-    {
-        std::cout << "Error! Division by zero!\n";
-    }
-    else if (task.status == 1)
-    {
-        std::cout << "Error! Unknown operation!\n";
-    }
-    else
-    {
-        std::cout << "Unknown error.\n";
-    }
+    
+
+}
+
+// Функция для печати справки по использованию программы 
+void printHelp() 
+{
+    std::cout << "Usage: ./console_calc <number1> <operation> <number2>\n";
+    std::cout << "Operations:\n";
+    std::cout << "  + : addition\n";
+    std::cout << "  - : subtraction\n";
+    std::cout << "  * : multiplication\n";
+    std::cout << "  / : division\n";
+    std::cout << "  ^ : power\n";
+    std::cout << "  ! : factorial (only number1 is used)\n";
+
+    std::cout << "Example:\n";
+    std::cout << "  ./console_calc 1 + 3\n";
+    std::cout << "  ./console_calc 3 !\n";
 }
