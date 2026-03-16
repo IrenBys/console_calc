@@ -14,7 +14,6 @@ void printResult(int a, int b, double c, char operation)
     {
         std::cout << a << operation << " = " << c << '\n';
     }
-   
 }
 
 // Функция для печати результата или сообщения об ошибке в зависимости от статуса задачи
@@ -31,18 +30,12 @@ void printTask(const Task& task)
         case 2:
             // Статус 2 означает, что пользователь вызвал --help, поэтому не печатаем результат
             break;
-        case 3:
-            std::cout << "Error! Invalid input for factorial!\n";
-            break;
         case -1:
-            std::cout << "Error! Division by zero!\n";
+            std::cout << "Invalid value\n";
             break;
         default:
-            std::cout << "Unknown error.\n";
-            
-    }
-    
-
+            std::cout << "Unknown error.\n";            
+    } 
 }
 
 // Функция для печати справки по использованию программы 

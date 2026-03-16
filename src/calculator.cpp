@@ -25,12 +25,7 @@ void calculate(Task& task)
         task.result = mathlib::power(task.value1, task.value2);
         break;
     case '!':
-        task.result = mathlib::factorial(task.value1);
-        // Проверяем, не возникла ли ошибка при вычислении факториала (например, для отрицательныx чисел)
-        if (task.result == -1) 
-        {
-            task.status = 3; 
-        }
+        task.status = mathlib::factorial(task.value1, &task.resul);
         break;
     default:
         task.status = 1;
