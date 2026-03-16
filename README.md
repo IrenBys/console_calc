@@ -14,27 +14,27 @@
 ```bash
 ./console_calc 5 + 3        # Сложение
 ./console_calc 7 - 2        # Вычитание
-./console_calc 4 \* 6      # Умножение (звёздочку нужно экранировать или взять в кавычки)
+./console_calc 4 \* 6       # Умножение (звёздочку нужно экранировать или взять в кавычки)
 ./console_calc 8 / 2        # Деление
 ./console_calc 2 ^ -3       # Степень (отрицательная степень)
 ./console_calc 5 !          # Факториал
-./console_calc --help        # Справка
+./console_calc --help       # Справка
 ```
 
 ## Вывод ошибок
 ```bash
-Error! Division by zero! — деление на ноль
-Error! Overflow — переполнение типа int
-Error! Factorial of negative number. — попытка вычислить факториал отрицательного числа
-Error! Unknown operation! — неизвестная операция
+Error! Division by zero!               — деление на ноль
+Error! Overflow                        — переполнение типа int
+Error! Factorial of negative number    — попытка вычислить факториал отрицательного числа
+Error! Unknown operation!              — неизвестная операция
 ```
 
 ## Структура проекта
 ```bash
-src/ — исходники калькулятора (main.cpp, runner.cpp, parser.cpp, checker.cpp, calculator.cpp, printer.cpp)
-include/ — заголовочные файлы, включая mathlib
-install/ — папка, куда устанавливается скомпилированный бинарник
-CMakeLists.txt — конфигурация сборки проекта
+src/             — исходники калькулятора (main.cpp, runner.cpp, parser.cpp, checker.cpp, calculator.cpp, printer.cpp)
+include/         — заголовочные файлы, включая mathlib
+install/         — папка, куда устанавливается скомпилированный бинарник
+CMakeLists.txt   — конфигурация сборки проекта
 ```
 
 
