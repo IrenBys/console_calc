@@ -52,7 +52,7 @@ void printHelp()
     std::cout << "Operations:\n";
     std::cout << "  + : addition\n";
     std::cout << "  - : subtraction\n";
-    std::cout << "  * : multiplication\n";
+    std::cout << "  \\* : multiplication\n";
     std::cout << "  / : division\n";
     std::cout << "  ^ : power\n";
     std::cout << "  ! : factorial (only number1 is used)\n";
@@ -60,4 +60,5 @@ void printHelp()
     std::cout << "Example:\n";
     std::cout << "  ./console_calc 1 + 3\n";
     std::cout << "  ./console_calc 3 !\n";
+    std::cout << "  ./console_calc 2 \\* 3\n";
 }
