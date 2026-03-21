@@ -20,20 +20,27 @@ void printTask(const Task& task)
 {
     switch (task.status)
     {
-        case 0:
+        case OK:
             printResult(task.value1, task.value2, task.result, task.operation);
             break;
-        case 1:
+        case UNKNOWN_OPERATION:
             std::cout << "Error! Unknown operation!\n";
             break;
-        case 2:
-            // Статус 2 означает, что пользователь вызвал --help, поэтому не печатаем результат
+        case HELP:
             break;
-        case -1:
-            std::cout << "Invalid input value\n";
+        case DIV_BY_ZERO:
+            std::cout << "Error! Division by zero!\n";
             break;
+        case OVERFLOW:
+            std::cout << "Error! Overflow!\n";
+            break;
+        case NEGATIVE_FACTORIAL:
+            std::cout << "Error! Negative factorial!\n";
+            break;
+        case ERROR:
+            std::cout << "Unknown error.\n";
         default:
-            std::cout << "Unknown error.\n";            
+            break;
     } 
 }
 
