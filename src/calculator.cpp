@@ -5,7 +5,7 @@
 // Результат сохраняется в поле result, а статус ошибки (если есть) сохраняется в поле status.
 void calculate(Task& task)
 {
-    task.status = 0;
+    task.status = OK;
     switch (task.operation)
     {
     case '+':
@@ -27,6 +27,6 @@ void calculate(Task& task)
         task.status = mathlib::factorial(task.value1, &task.result);
         break;
     default:
-        task.status = 1;
+        task.status = ERROR;
     }
 }
